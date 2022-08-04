@@ -13,7 +13,9 @@ describe('StormGlass client', () => {
     const lgn = 151.289824;
 
     // Criando um mock de uma requisição GET do axios, e passado o retorno desse request.
-    axios.get = jest.fn().mockResolvedValue(stormGlassWeather3HoursFixture);
+    axios.get = jest
+      .fn()
+      .mockResolvedValue({ data: stormGlassWeather3HoursFixture });
 
     const stormGlass = new StormGlass(axios);
 
